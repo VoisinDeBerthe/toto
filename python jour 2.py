@@ -92,7 +92,7 @@ print("Bonne année")
 
 
 # lancement des tests  :
-pytest .\test_main.py 
+# pytest .\test_main.py 
 
 # exemple pytest : test_main.py
 import main
