@@ -1,10 +1,10 @@
 # https://www.sharemycode.fr/pythonj3
 
-T : Léa, Allaric
-HP : Sophie, Bruno, Lucas
-SW : Laurent, David
+# T : LÃ©a, Allaric
+# HP : Sophie, Bruno, Lucas
+# SW : Laurent, David
 
-# bases de données exo avec bonus execute
+# bases de donnÃ©es exo avec bonus execute
 
 import sqlite3
 
@@ -47,7 +47,7 @@ with sqlite3.connect(database_name) as conn:
       VALUES(?, ?)"""
     cursor.executemany(sql_insert, list_of_references)
 
-    # affichage de la table entière
+    # affichage de la table entiÃ¨re
     cursor.execute("""SELECT * FROM books """) # selection
     rows = cursor.fetchall()
     for row in rows:
@@ -56,7 +56,7 @@ with sqlite3.connect(database_name) as conn:
 
 
 
-# bases de données démo avec mot-clé with ----------------------
+# bases de donnÃ©es dÃ©mo avec mot-clÃ© with ----------------------
 
 import sqlite3
 
@@ -81,7 +81,7 @@ with sqlite3.connect(database_name) as conn:
     cursor.execute("""INSERT OR IGNORE INTO contacts (nom, age, job)
       VALUES(?, ?, ?)""", reference)
 
-    # affichage de la table entière
+    # affichage de la table entiÃ¨re
     cursor.execute("""SELECT * FROM contacts """) # selection
     rows = cursor.fetchall()
     for row in rows:
@@ -98,7 +98,7 @@ import json
 
 def save_dico(dico_to_save, output_filename):
     """
-    sauvegarde les données du dictionnaire
+    sauvegarde les donnÃ©es du dictionnaire
     dans un fichier json
     """
     with open(output_filename, "w") as json_file:
@@ -107,7 +107,7 @@ def save_dico(dico_to_save, output_filename):
 
 def load_dico(input_filename):
     """
-    charge les données du fichier json dans
+    charge les donnÃ©es du fichier json dans
     un dictionnaire
     """
     with open(input_filename, "r") as json_file:
@@ -140,11 +140,11 @@ data_dict = {
     },
 }
 
-# sérialisation (dico vers json)
+# sÃ©rialisation (dico vers json)
 with open(filename, "w") as json_file:
   json.dump(data_dict, json_file, indent=4)
 
-# désérialisation (json vers dico)
+# dÃ©sÃ©rialisation (json vers dico)
 with open(filename, "r") as json_file:
   data_dict = json.load(json_file)
 
@@ -157,8 +157,8 @@ print(type(data_dict))
 # fichiers textes exos
 def exercice_1():
     """
-    Écriture : à l'aide d'une boucle pour,
-    écrire les lignes suivantes dans un fichier
+    Ã‰criture : Ã  l'aide d'une boucle pour,
+    Ã©crire les lignes suivantes dans un fichier
 
     Lecture: lire les lignes du fichier et
     les afficher dans la console
@@ -178,16 +178,16 @@ def exercice_1():
         print(content)
         # bonus : transformer en liste
         content = content.split("\n")
-        content = content[:-1] # retirer la dernière case, vide
+        content = content[:-1] # retirer la derniÃ¨re case, vide
         print(content)
 
 
 def exo_2_dico_to_file(dico_to_save, output_filename):
     """
     sauvegarde le dictionnaire dans un fichier
-    format : une ligne = un couple clé valeur
+    format : une ligne = un couple clÃ© valeur
 
-    :param dico_to_save: le dictionnaire à sauvegarder
+    :param dico_to_save: le dictionnaire Ã  sauvegarder
     :param output_filename: le fichier de sauvegarde
     :return: None
     """
@@ -199,8 +199,8 @@ def exo_2_dico_to_file(dico_to_save, output_filename):
 
 def exo_2_file_to_dico(input_filename):
     """
-    charge les données du fichier dans un dictionnaire
-    format : une ligne = un couple clé valeur
+    charge les donnÃ©es du fichier dans un dictionnaire
+    format : une ligne = un couple clÃ© valeur
 
     :param output_filename: le fichier de sauvegarde
     :return: un dictionnaire
@@ -235,16 +235,16 @@ if __name__ == '__main__':
     print(dico_2)
 
 
-# fichiers textes démo ----------------------------
+# fichiers textes dÃ©mo ----------------------------
 filename = "demo.txt"
 
-# ouverture en écriture avec écrasement
+# ouverture en Ã©criture avec Ã©crasement
 with open(filename, "w", encoding="utf-8") as file:
     prenom = "Monty"
     line = f"Bonjour {prenom}\n"
     file.write(line)
 
-# ouverture en écriture avec ajout à la fin
+# ouverture en Ã©criture avec ajout Ã  la fin
 with open(filename, "a", encoding="utf-8") as file:
     age = str(42)
     file.write(age)
@@ -255,25 +255,25 @@ with open(filename, "r", encoding="utf-8") as file:
     print(content)
     print(type(content))
 
-# ouverture en lecture : ligne à ligne
+# ouverture en lecture : ligne Ã  ligne
 with open(filename, "r", encoding="utf-8") as file:
     for line in file:
-        # nettoyer les espaces et les \n à la fin de la ligne
+        # nettoyer les espaces et les \n Ã  la fin de la ligne
         line = line.rstrip()
         # remplacer Monty par Python
         line = line.replace("Monty", "Python")
-        # découper la chaine (défaut : espaces)
+        # dÃ©couper la chaine (dÃ©faut : espaces)
         line = line.split()
         print(line)
 
-# création de modules : mon_module.py
+# crÃ©ation de modules : mon_module.py
 
 """
-Créé le 31/01/2024
+CrÃ©Ã© le 31/01/2024
 
 @author: G. Delouis
 
-Module de démo sur la création des modules
+Module de dÃ©mo sur la crÃ©ation des modules
 """
 
 
@@ -283,13 +283,13 @@ def renvoyer_addition(nb_1, nb_2):
 
 
 print(f"__name__ dans mon_module.py : {__name__}")
-# si ce fichier est exécuté, joue les lignes suivantes
+# si ce fichier est exÃ©cutÃ©, joue les lignes suivantes
 # sinon ignore les lignes suivantes
 if __name__ == "__main__":
     print(renvoyer_addition(40, 2))
 
 
-# création de modules : utilisation_de_mon_module.py
+# crÃ©ation de modules : utilisation_de_mon_module.py
 import mon_module as mm
 
 print(f"__name__ dans utilisation_de_mon_module.py : {__name__}")
@@ -303,9 +303,9 @@ print(mm.renvoyer_addition(10, 3))
 #--------------------------------------------------La fonction
 def valide_date(date_texte: str) -> (int, int, int):
     """
-    Décompose une date si elle est valide
-    :param date_texte: date en texte à la française
-    :return: le tupple (jour, mois, année) si OK, None sinon
+    DÃ©compose une date si elle est valide
+    :param date_texte: date en texte Ã  la franÃ§aise
+    :return: le tupple (jour, mois, annÃ©e) si OK, None sinon
     """
     match = re.search(r"^(\d\d)/(\d\d)/(\d{4})$", date_texte)
 
@@ -361,10 +361,10 @@ import sys
 
 def sys_exercice_1():
     """
-    Rédiger un script à lancer depuis un terminal qui affiche:
+    RÃ©diger un script Ã  lancer depuis un terminal qui affiche:
        * Le nom du script
-       * La liste des arguments passés en ligne de commande
-    Prendre en compte le cas où aucun argument n’est passé en ligne de commande
+       * La liste des arguments passÃ©s en ligne de commande
+    Prendre en compte le cas oÃ¹ aucun argument nÂ’est passÃ© en ligne de commande
     """
     nom_script = sys.argv[0]
     print(f"nom du script : {nom_script}")
@@ -379,11 +379,11 @@ def sys_exercice_1():
 
 def sys_exercice_1_bonus_stdout():
     """
-    Rédiger un script à lancer depuis un terminal qui affiche:
+    RÃ©diger un script Ã  lancer depuis un terminal qui affiche:
        * Le nom du script
-       * La liste des arguments passés en ligne de commande
-    Prendre en compte le cas où aucun argument n’est passé en ligne de commande
-    ÉCRIT SUR LA SORTIE STANDARD
+       * La liste des arguments passÃ©s en ligne de commande
+    Prendre en compte le cas oÃ¹ aucun argument nÂ’est passÃ© en ligne de commande
+    Ã‰CRIT SUR LA SORTIE STANDARD
     """
     nom_script = sys.argv[0]
     sys.stdout.write(f"nom du script : {nom_script}\n")
@@ -397,7 +397,7 @@ def sys_exercice_1_bonus_stdout():
 
 
 def sys_exercice_2():
-    """Rédiger un script à lancer depuis un terminal qui affiche:
+    """RÃ©diger un script Ã  lancer depuis un terminal qui affiche:
         * La version de Python
         * L'OS de python
     """
@@ -409,8 +409,8 @@ def sys_exercice_2():
 
 def sys_exercice_3():
     """
-    Rédiger un script à lancer depuis un terminal qui :
-        Récupère deux nombres en ligne de commande
+    RÃ©diger un script Ã  lancer depuis un terminal qui :
+        RÃ©cupÃ¨re deux nombres en ligne de commande
         Quitte le programme si le nombre d'arguments est insuffisant
         Fait la division du premier par le second
 
@@ -426,27 +426,27 @@ def sys_exercice_3():
     print()
 
 
-# exécution des exos
+# exÃ©cution des exos
 sys_exercice_1()
 sys_exercice_1_bonus_stdout()
 sys_exercice_2()
 sys_exercice_3()
 
 
-# sys.argv démo
+# sys.argv dÃ©mo
 
 import sys
 
 print(sys.argv)
 
 if len(sys.argv) < 2:
-    print("précisez le fichier")
+    print("prÃ©cisez le fichier")
     print(sys.exit("fermeture du programme"))
 fichier_a_traiter = sys.argv[1]
 
 # traitement du fichier
 print(f"traitement du fichier {fichier_a_traiter}...")
-print("fichier traité")
+print("fichier traitÃ©")
 
 # datetime exo --------------
 import datetime as dt
@@ -454,9 +454,9 @@ import datetime as dt
 
 # datetime exo 1
 def date_rendu_livre():
-    """demande à l'utilisateur la date d'emprunt et affiche la
+    """demande Ã  l'utilisateur la date d'emprunt et affiche la
     date de retour de l'ouvrage (date limite : 3 semaines
-    après la date d'emprunt)"""
+    aprÃ¨s la date d'emprunt)"""
 
     today = dt.date.today()
     print("today : ", today)
@@ -469,9 +469,9 @@ def date_rendu_livre():
 
 # datetime exo 1 bonus
 def date_rendu_livre_avec_saisie():
-    """demande à l'utilisateur la date d'emprunt et affiche la
+    """demande Ã  l'utilisateur la date d'emprunt et affiche la
     date de retour de l'ouvrage (date limite : 3 semaines
-    après la date d'emprunt)"""
+    aprÃ¨s la date d'emprunt)"""
     annee, mois, jour = input("today (format aaaa-mm-jj) : ").split("-")
     annee = int(annee)
     mois = int(mois)
@@ -484,7 +484,7 @@ def date_rendu_livre_avec_saisie():
 
 # exercice 2
 def nb_jours_avant_nouvelle_annee():
-    """affiche le nombre de jours restants avant la nouvelle année"""
+    """affiche le nombre de jours restants avant la nouvelle annÃ©e"""
     today = dt.date.today()
     next_year = dt.date(today.year + 1, 1, 1)
     print(next_year - today)
