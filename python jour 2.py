@@ -1,8 +1,8 @@
 # https://www.sharemycode.fr/pythonj2
 
-T : Léa, Allaric
-HP : Sophie, Bruno
-SW : Laurent
+# T : LÃ©a, Allaric
+# HP : Sophie, Bruno
+# SW : Laurent
 
 
 import random
@@ -13,7 +13,7 @@ liste_faces = ["pile", "face"]
 
 lancer = random.choice(liste_faces)
 if choix == lancer:
-    print("Bravo, vous avez gagné !")
+    print("Bravo, vous avez gagnÃ© !")
 else:
     print("dommage...")
 
@@ -28,13 +28,13 @@ while choix not in liste_faces:
 
 lancer = random.choice(liste_faces)
 if choix == lancer:
-    print("Bravo, vous avez gagné !")
+    print("Bravo, vous avez gagnÃ© !")
 else:
     print("dommage...")
 
 # pile ou face version 3 :
 # fonction pour une partie
-# redemander à l'utilisateur
+# redemander Ã  l'utilisateur
 
 def partie_pile_ou_face():
     """
@@ -47,7 +47,7 @@ def partie_pile_ou_face():
 
     lancer = random.choice(liste_faces)
     if choix == lancer:
-        print("Bravo, vous avez gagné !")
+        print("Bravo, vous avez gagnÃ© !")
     else:
         print("dommage...")
 
@@ -69,7 +69,7 @@ from time import sleep
 for i in range(10, 0, -1):
     print(i)
     sleep(1)
-print("Bonne année")
+print("Bonne annÃ©e")
 
 
 # imports de modules v2
@@ -79,7 +79,7 @@ import time as ti
 for i in range(10, 0, -1):
     print(i)
     ti.sleep(1)
-print("Bonne année")
+print("Bonne annÃ©e")
 
 # imports de modules v1
 import time
@@ -88,7 +88,7 @@ import time
 for i in range(10, 0, -1):
     print(i)
     time.sleep(1)
-print("Bonne année")
+print("Bonne annÃ©e")
 
 
 # lancement des tests  :
@@ -108,7 +108,7 @@ def test_ma_division_10_0():
 # exemple pytest : main.py
 def ma_division(num, denom):
     """
-    implémentation maison d'une
+    implÃ©mentation maison d'une
     division de deux nombres
     """
     resultat = None
@@ -136,10 +136,10 @@ print(est_bissextile(2000))
 
 
 
-# fonctions exo paramètres optionnels
+# fonctions exo paramÃ¨tres optionnels
 def calculer_moyenne(nb_1: float, nb_2: float, *numbers: float) -> float:
     """
-    Calcule la moyenne de tous les nombres passés en argument
+    Calcule la moyenne de tous les nombres passÃ©s en argument
     :param nb_1: 1er nombre obligatoire
     :param nb_2: 2d nombre obligatoire
     :param numbers: les nombres optionnels
@@ -160,7 +160,7 @@ print(calculer_moyenne(10, 20, 30.0))
 calculer_moyenne(10)
 
 
-# paramètres optionnels
+# paramÃ¨tres optionnels
 def print_test_var_args(first_arg, *args):
     """affiche l'argument obligatoire, puis les
     arguments optionnels s'il y en a"""
@@ -177,9 +177,9 @@ print_test_var_args('Monty')
 
 
 # fonctions et types mutables :
-# passage par référence
+# passage par rÃ©fÃ©rence
 def modifier_liste(ma_liste):
-    """Modifie la première valeur de la
+    """Modifie la premiÃ¨re valeur de la
     liste et la renvoie"""
     ma_liste[0] = 42
     return ma_liste
@@ -255,7 +255,7 @@ nb = 5
 table_multi(nb)
 table_multi(nb, 2, 4)
 
-# fonctions : création ----------------------
+# fonctions : crÃ©ation ----------------------
 def renvoyer_addition(nb_1, nb_2):
     """renvoie la somme de nb_1 et nb_2"""
     resultat = nb_1 + nb_2
@@ -318,7 +318,7 @@ for nb in liste_exo_2:
 # for exo 3
 for i in range(10, -1, -1):
     print(i)
-print("Bonne année :)")
+print("Bonne annÃ©e :)")
 
 # for exo 4
 
@@ -341,7 +341,7 @@ for key, value in dico_personnage.items():
     print(f"{key=}, {value=}")
 
 
-# for démo : liste ------------------------
+# for dÃ©mo : liste ------------------------
 
 ma_liste = [12, 42, 13]
 for nb in ma_liste:
@@ -349,26 +349,26 @@ for nb in ma_liste:
 print()
 
 # for et range avec une valeur
-# de 0 inclus à 5 exclus
+# de 0 inclus Ã  5 exclus
 for i in range(5):
     print(i)
 print()
 
 # for et range avec deux valeurs
-# de 1 inclus à 5 exclus
+# de 1 inclus Ã  5 exclus
 for i in range(1, 5):
     print(i)
 print()
 
 # for et range avec trois valeurs
-# de 1 inclus à 5 exclus par pas de 2
+# de 1 inclus Ã  5 exclus par pas de 2
 for i in range(1, 5, 2):
     print(i)
 print()
-# for et range avec trois valeurs et pas négatif
-# de 1 inclus à 5 exclus par pas de -2
-# attention à l'ordre !
-print("avec un pas négatif")
+# for et range avec trois valeurs et pas nÃ©gatif
+# de 1 inclus Ã  5 exclus par pas de -2
+# attention Ã  l'ordre !
+print("avec un pas nÃ©gatif")
 for i in range(5, 1, -2):
     print(i)
 print()
