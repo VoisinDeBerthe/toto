@@ -11,7 +11,7 @@ import random
 choix = input("pile ou face ? : ")
 liste_faces = ["pile", "face"]
 
-lancer = random.choice(liste_faces)
+# lancer = random.choice(liste_faces)
 if choix == lancer:
     print("Bravo, vous avez gagné !")
 else:
@@ -26,7 +26,7 @@ liste_faces = ["pile", "face"]
 while choix not in liste_faces:
     choix = input("pile ou face ? : ").strip().lower()
 
-lancer = random.choice(liste_faces)
+# lancer = random.choice(liste_faces)
 if choix == lancer:
     print("Bravo, vous avez gagné !")
 else:
@@ -45,7 +45,7 @@ def partie_pile_ou_face():
     while choix not in liste_faces:
         choix = input("pile ou face ? : ").strip().lower()
 
-    lancer = random.choice(liste_faces)
+    # lancer = random.choice(liste_faces)
     if choix == lancer:
         print("Bravo, vous avez gagné !")
     else:
